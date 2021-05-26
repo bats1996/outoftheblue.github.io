@@ -1,0 +1,47 @@
+@font-face {
+    font-family: outOfTheBlueFont;
+    src: url(assets/Kaftan-Serif.otf);
+  }
+
+body{
+    background-image: url(assets/sky_image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+.topnav{
+    display: flex;
+    justify-content: space-around;
+    position: sticky;
+    width: 100%;
+}
+
+.topnav a {
+    float: center;
+    color:blue;
+    font-family: outOfTheBlueFont;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 25px;
+  }
+
+  .topnav a:hover {
+    color: white;
+  }
+
+  .intro{
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      height:100%;
+  }
+
+  .intro p{
+      position: absolute;
+      color: blue;
+      font-family: outOfTheBlueFont;
+      text-align: center;
+      align-items: center;
+      top: 40%;
+  }

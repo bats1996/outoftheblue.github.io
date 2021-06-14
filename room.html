@@ -1,6 +1,7 @@
 <!DOCTYPE html>
     <head>
         <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+        <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
     </head>
 
     <body>
@@ -12,5 +13,16 @@
             </a-assets>
             <a-obj-model src="#object" mtl="#material" position="-12 0 -20"></a-obj-model>
             <a-sky src="#sky"></a-sky>
+            <a-plane position="2 2 -7" rotation="0 90 0" color="#FFC65D"
+                event-set__enter="_event: mouseenter; _target: #planeText; visible: true"
+                event-set__leave="_event: mouseleave; _target: #planeText; visible: false">
+                <a-text id="planeText" value="This is an artwork" align="center" color="#FFF" visible="false" position="0 -0.55 0.55"
+                geometry="primitive: plane; width: 1.75" material="color: #333"></a-text>
+            </a-plane>
+
+            <a-camera>
+                <a-cursor></a-cursor>
+            </a-camera>
         </a-scene>
+
     </body>
